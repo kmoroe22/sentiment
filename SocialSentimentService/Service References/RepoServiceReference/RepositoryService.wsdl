@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RepoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RepositoryService.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/RepositoryService.Headers" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRepositoryService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPosts" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllSentiments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSentiments" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllSentiments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSentimentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPlatforms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlatforms" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPlatforms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlatformsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPostTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostTypes" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllPostTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllSentimentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSentimentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllSentimentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSentimentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllAccountTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccountTypes" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAllAccountTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccountTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountsByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountsByPage" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountsByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountsByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostsByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPage" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostsByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUsersByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByPage" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUsersByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetSentimentById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentimentById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetSentimentById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentimentByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetSentimentTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentimentTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetSentimentTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentimentTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPostTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPlatformById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlatformById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetPlatformById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlatformByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPosts" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AddPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPost" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AddPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPost" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetUserPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountPosts" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetAccountPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetCommentsByPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsByPosts" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetCommentsByPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsByPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetFacebookCommentPostType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacebookCommentPostType" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetFacebookCommentPostType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacebookCommentPostTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetFacebookWallPostType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacebookWallPostType" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetFacebookWallPostType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFacebookWallPostTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AddFacebookPageAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFacebookPageAccount" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AddFacebookPageAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFacebookPageAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_PostExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostExists" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_PostExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AccountExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountExists" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_AccountExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_UploadComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadComments" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_UploadComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_UploadComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadComment" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_UploadComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetWorstComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorstComment" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetWorstComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorstCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetBestComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBestComment" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetBestComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBestCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetNeutralComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeutralComments" />
+  </wsdl:message>
+  <wsdl:message name="IRepositoryService_GetNeutralComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeutralCommentsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRepositoryService">
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllUsers" message="tns:IRepositoryService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllUsersResponse" message="tns:IRepositoryService_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPosts" message="tns:IRepositoryService_GetAllPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPostsResponse" message="tns:IRepositoryService_GetAllPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSentiments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllSentiments" message="tns:IRepositoryService_GetAllSentiments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllSentimentsResponse" message="tns:IRepositoryService_GetAllSentiments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlatforms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPlatforms" message="tns:IRepositoryService_GetAllPlatforms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPlatformsResponse" message="tns:IRepositoryService_GetAllPlatforms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPostTypes" message="tns:IRepositoryService_GetAllPostTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllPostTypesResponse" message="tns:IRepositoryService_GetAllPostTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSentimentTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllSentimentTypes" message="tns:IRepositoryService_GetAllSentimentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllSentimentTypesResponse" message="tns:IRepositoryService_GetAllSentimentTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllAccounts" message="tns:IRepositoryService_GetAllAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllAccountsResponse" message="tns:IRepositoryService_GetAllAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccountTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAllAccountTypes" message="tns:IRepositoryService_GetAllAccountTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAllAccountTypesResponse" message="tns:IRepositoryService_GetAllAccountTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountsByPage" message="tns:IRepositoryService_GetAccountsByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountsByPageResponse" message="tns:IRepositoryService_GetAccountsByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetPostsByPage" message="tns:IRepositoryService_GetPostsByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetPostsByPageResponse" message="tns:IRepositoryService_GetPostsByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetUsersByPage" message="tns:IRepositoryService_GetUsersByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetUsersByPageResponse" message="tns:IRepositoryService_GetUsersByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetUserById" message="tns:IRepositoryService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetUserByIdResponse" message="tns:IRepositoryService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetPostById" message="tns:IRepositoryService_GetPostById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetPostByIdResponse" message="tns:IRepositoryService_GetPostById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSentimentById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetSentimentById" message="tns:IRepositoryService_GetSentimentById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetSentimentByIdResponse" message="tns:IRepositoryService_GetSentimentById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountById" message="tns:IRepositoryService_GetAccountById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountByIdResponse" message="tns:IRepositoryService_GetAccountById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSentimentTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetSentimentTypeById" message="tns:IRepositoryService_GetSentimentTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetSentimentTypeByIdResponse" message="tns:IRepositoryService_GetSentimentTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetPostTypeById" message="tns:IRepositoryService_GetPostTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetPostTypeByIdResponse" message="tns:IRepositoryService_GetPostTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlatformById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetPlatformById" message="tns:IRepositoryService_GetPlatformById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetPlatformByIdResponse" message="tns:IRepositoryService_GetPlatformById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountTypeById" message="tns:IRepositoryService_GetAccountTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountTypeByIdResponse" message="tns:IRepositoryService_GetAccountTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/RegisterUser" message="tns:IRepositoryService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/RegisterUserResponse" message="tns:IRepositoryService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetUserPosts" message="tns:IRepositoryService_GetUserPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetUserPostsResponse" message="tns:IRepositoryService_GetUserPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/AddPost" message="tns:IRepositoryService_AddPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/AddPostResponse" message="tns:IRepositoryService_AddPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetUserPost" message="tns:IRepositoryService_GetUserPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetUserPostResponse" message="tns:IRepositoryService_GetUserPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountPosts" message="tns:IRepositoryService_GetAccountPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetAccountPostsResponse" message="tns:IRepositoryService_GetAccountPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsByPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetCommentsByPosts" message="tns:IRepositoryService_GetCommentsByPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetCommentsByPostsResponse" message="tns:IRepositoryService_GetCommentsByPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacebookCommentPostType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetFacebookCommentPostType" message="tns:IRepositoryService_GetFacebookCommentPostType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetFacebookCommentPostTypeResponse" message="tns:IRepositoryService_GetFacebookCommentPostType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFacebookWallPostType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetFacebookWallPostType" message="tns:IRepositoryService_GetFacebookWallPostType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetFacebookWallPostTypeResponse" message="tns:IRepositoryService_GetFacebookWallPostType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFacebookPageAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/AddFacebookPageAccount" message="tns:IRepositoryService_AddFacebookPageAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/AddFacebookPageAccountResponse" message="tns:IRepositoryService_AddFacebookPageAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/PostExists" message="tns:IRepositoryService_PostExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/PostExistsResponse" message="tns:IRepositoryService_PostExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/AccountExists" message="tns:IRepositoryService_AccountExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/AccountExistsResponse" message="tns:IRepositoryService_AccountExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/UploadComments" message="tns:IRepositoryService_UploadComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/UploadCommentsResponse" message="tns:IRepositoryService_UploadComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/UploadComment" message="tns:IRepositoryService_UploadComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/UploadCommentResponse" message="tns:IRepositoryService_UploadComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorstComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetWorstComment" message="tns:IRepositoryService_GetWorstComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetWorstCommentResponse" message="tns:IRepositoryService_GetWorstComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBestComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetBestComment" message="tns:IRepositoryService_GetBestComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetBestCommentResponse" message="tns:IRepositoryService_GetBestComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNeutralComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRepositoryService/GetNeutralComments" message="tns:IRepositoryService_GetNeutralComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRepositoryService/GetNeutralCommentsResponse" message="tns:IRepositoryService_GetNeutralComments_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soap" type="tns:IRepositoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPosts">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSentiments">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllSentiments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlatforms">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllPlatforms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostTypes">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllPostTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSentimentTypes">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllSentimentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccountTypes">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAllAccountTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsByPage">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAccountsByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostsByPage">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetPostsByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByPage">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetUsersByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetPostById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSentimentById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetSentimentById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAccountById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSentimentTypeById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetSentimentTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostTypeById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetPostTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlatformById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetPlatformById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTypeById">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAccountTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPosts">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetUserPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/AddPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPost">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetUserPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountPosts">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetAccountPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsByPosts">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetCommentsByPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacebookCommentPostType">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetFacebookCommentPostType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFacebookWallPostType">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetFacebookWallPostType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFacebookPageAccount">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/AddFacebookPageAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostExists">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/PostExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountExists">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/AccountExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadComments">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/UploadComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadComment">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/UploadComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorstComment">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetWorstComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBestComment">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetBestComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNeutralComments">
+      <soap:operation soapAction="http://tempuri.org/IRepositoryService/GetNeutralComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RepoService">
+    <wsdl:port name="soap" binding="tns:soap">
+      <soap:address location="http://localhost:53177/RepositoryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,16 @@
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\SocialSentimentService.Test.dll.config
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\SocialSentimentService.Test.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\SocialSentimentService.Test.pdb
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\AlchemyAPI.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\Effort.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\Facebook.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\nunit.framework.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\SocialSentimentService.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\NMemory.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\SocialSentimentService.pdb
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\Effort.xml
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\Facebook.xml
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\bin\Debug\nunit.framework.xml
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\obj\Debug\SocialSentimentService.Test.csprojResolveAssemblyReference.cache
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\obj\Debug\SocialSentimentService.Test.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService.Test\obj\Debug\SocialSentimentService.Test.pdb

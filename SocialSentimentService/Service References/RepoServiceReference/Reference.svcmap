@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b51c06d2-8486-4fb9-af37-8b8590593c4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53177/RepositoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RepositoryService.xsd" MetadataType="Schema" ID="25ea097c-f86a-41ae-ac7b-59ea130b9bcc" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RepositoryService1.xsd" MetadataType="Schema" ID="67c1d2f6-fd8b-4ec7-9b1b-78e927ad60ee" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RepositoryService2.xsd" MetadataType="Schema" ID="d0c128a9-37a1-485b-af85-301dd20fb55e" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RepositoryService.wsdl" MetadataType="Wsdl" ID="487e6ce0-5cb1-48dc-af38-bfc3f9473c07" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?wsdl" />
+    <MetadataFile FileName="RepositoryService3.xsd" MetadataType="Schema" ID="92ccf3e5-9f0a-4f40-9157-c69cf43c2138" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RepositoryService4.xsd" MetadataType="Schema" ID="9e98089c-677d-4965-8416-08737cff6fb8" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RepositoryService.disco" MetadataType="Disco" ID="1c1d1cb7-c26f-42b4-89e7-963b47403c44" SourceId="1" SourceUrl="http://localhost:53177/RepositoryService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RepositoryService.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RepositoryService.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53177/RepositoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfUserObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserObject" nillable="true" type="tns:UserObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserObject" nillable="true" type="tns:ArrayOfUserObject" />
+  <xs:complexType name="UserObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserObject" nillable="true" type="tns:UserObject" />
+  <xs:complexType name="ArrayOfPostObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostObject" nillable="true" type="tns:PostObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostObject" nillable="true" type="tns:ArrayOfPostObject" />
+  <xs:complexType name="PostObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:AccountObject" />
+      <xs:element minOccurs="0" name="PostId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostTypeObject" nillable="true" type="tns:PostTypeObject" />
+      <xs:element minOccurs="0" name="timeAdded" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostObject" nillable="true" type="tns:PostObject" />
+  <xs:complexType name="AccountObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="About" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountType" nillable="true" type="tns:AccountTypeObject" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Posts" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountObject" nillable="true" type="tns:AccountObject" />
+  <xs:complexType name="AccountTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Platform" nillable="true" type="tns:PlatformObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountTypeObject" nillable="true" type="tns:AccountTypeObject" />
+  <xs:complexType name="PlatformObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlatFormId" type="xs:int" />
+      <xs:element minOccurs="0" name="PlatformUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlatformObject" nillable="true" type="tns:PlatformObject" />
+  <xs:complexType name="PostTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostTypeObject" nillable="true" type="tns:PostTypeObject" />
+  <xs:complexType name="ArrayOfSentimentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SentimentObject" nillable="true" type="tns:SentimentObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSentimentObject" nillable="true" type="tns:ArrayOfSentimentObject" />
+  <xs:complexType name="SentimentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PostObject" nillable="true" type="tns:PostObject" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+      <xs:element minOccurs="0" name="SentimentId" type="xs:int" />
+      <xs:element minOccurs="0" name="SentimentTypeObject" nillable="true" type="tns:SentimentTypeObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SentimentObject" nillable="true" type="tns:SentimentObject" />
+  <xs:complexType name="SentimentTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxScore" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SentimentTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SentimentTypeObject" nillable="true" type="tns:SentimentTypeObject" />
+  <xs:complexType name="ArrayOfPlatformObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlatformObject" nillable="true" type="tns:PlatformObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlatformObject" nillable="true" type="tns:ArrayOfPlatformObject" />
+  <xs:complexType name="ArrayOfPostTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostTypeObject" nillable="true" type="tns:PostTypeObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostTypeObject" nillable="true" type="tns:ArrayOfPostTypeObject" />
+  <xs:complexType name="ArrayOfSentimentTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SentimentTypeObject" nillable="true" type="tns:SentimentTypeObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSentimentTypeObject" nillable="true" type="tns:ArrayOfSentimentTypeObject" />
+  <xs:complexType name="ArrayOfAccountObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountObject" nillable="true" type="tns:AccountObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountObject" nillable="true" type="tns:ArrayOfAccountObject" />
+  <xs:complexType name="ArrayOfAccountTypeObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountTypeObject" nillable="true" type="tns:AccountTypeObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountTypeObject" nillable="true" type="tns:ArrayOfAccountTypeObject" />
+  <xs:complexType name="ArrayOfFbCommentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FbCommentObject" nillable="true" type="tns:FbCommentObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFbCommentObject" nillable="true" type="tns:ArrayOfFbCommentObject" />
+  <xs:complexType name="FbCommentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Likes" type="xs:long" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PictureUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="tns:PostObject" />
+      <xs:element minOccurs="0" name="PosterId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SentimentScore" type="xs:double" />
+      <xs:element minOccurs="0" name="timeAdded" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FbCommentObject" nillable="true" type="tns:FbCommentObject" />
+</xs:schema>

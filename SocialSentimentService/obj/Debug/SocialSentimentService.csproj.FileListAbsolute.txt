@@ -1,0 +1,10 @@
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\SocialSentimentService.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\SocialSentimentService.pdb
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\AlchemyAPI.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\Facebook.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\nunit.framework.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\Facebook.xml
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\bin\nunit.framework.xml
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\obj\Debug\SocialSentimentService.dll
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\obj\Debug\SocialSentimentService.pdb
+C:\Users\karabo.moroe\Documents\Visual Studio 2012\Projects\SocialSentimentService\SocialSentimentService\obj\Debug\SocialSentimentService.csprojResolveAssemblyReference.cache
